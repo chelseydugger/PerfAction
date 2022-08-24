@@ -20,6 +20,12 @@ jobs:
           test-plan-path: ./TestPlans/S01_SimpleExample/CreatePaymentAPI_TokenOnly.jmx
           args: ""
           
+      - name: Run JMeter Tests 3
+        uses: ./
+        with:
+          test-plan-path: ./TestPlans/S01_SimpleExample/SOAP API to Redemption.jmx
+          args: ""
+          
       - name: Upload Results
         uses: actions/upload-artifact@v2
         with:
